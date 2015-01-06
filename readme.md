@@ -16,12 +16,12 @@ Simpli-Swatchable2 gives you two advantages:
     Run one command `make swatches` and rebuild all the swatches with a new namespace or whatever other edits you made in their less files.
 
 
-###Getting Started
 
 
+####Quickstart - Using the Namspaced Bootstrap 2.0 Swatches
 Simpli-Swatchable2 swatches can be used without any further modification. Simply download the swatches, and add them like you would any Twitter Bootstrap 2.0 css and javascript file.
 
-Download [Simpli-Swatchable2 swatches]() here. The default namespace is 'bootstrap'. 
+Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/Bootswatches2.3.2-Namespaced.zip) here. The default namespace is 'bootstrap'. 
 
 
 
@@ -34,7 +34,7 @@ When you wish to apply the bootstrap classes, you need to surround your markup w
 
 
 
-#Swatch Building Requirements
+###Swatch Building Requirements
 
 To compile swatches from less files to css files, you'll need to install node.js and a less compiler.
 
@@ -161,6 +161,20 @@ Bootstrap 3.0 themes created from the Bootstrap project use grunt to build theme
 
 For more information on building Bootstrap 3.0 themes, see [http://bootswatch.com/help/](http://bootswatch.com/help/)
 
+
+##Repo Maintenance
+
+To update swatches:   
+
+1. create a new branch ,e.g.: `Boostrap-Swatches-2.3.2`
+2. rebuild the swatches
+3. delete everything in the branch except the `swatches-compiled` directory
+4. commit the branch
+5. switch to master
+5. create a tag of the branch
+6. delete the branch
+7. push to remote
+8. update the readme with the new link
 
 
 ###Problems Compiling
