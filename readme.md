@@ -147,9 +147,9 @@ Below is a brief guide of the important files in bootswatch that allows you to m
         </div>
 
 *  **swatchmaker/swatchmaker-responsive.less** – responsive version of swatchmaker.less. If you changed the namespace in swatchmaker.less, change it here also.
-*  **swatches/<swatch-name>/variables/less** – Edit this file to customize any of the colors or other variables that you want to change from bootstrap's default.
+*  **swatches/swatch-name/variables/less** – Edit this file to customize any of the colors or other variables that you want to change from bootstrap's default.
 (This file is identical to bootstrap/variables.less but is here so you dont have to edit the downloaded source)
-*  **swatches/<swatch-name>/bootswatch.less** – is basically an override file. You can define classes and mixins here and they will override the main bootstrap.less file
+*  **swatches/swatch-name/bootswatch.less** – is basically an override file. You can define classes and mixins here and they will override the main bootstrap.less file
 
 
 
