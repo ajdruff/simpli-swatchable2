@@ -1,0 +1,15 @@
+//swatchmaker.less
+//this file is intended to be copied into the swatch directory and then compiled using lessc . See make-bootswatches.sh for more.
+//be careful to comment out either bootstrap.less or bootstrap-customize. you cant have both or will wind up with unpredictable results.
+//bootstrap-customize.less is just a copy of bootstrap.less but with components you dont want commented out.
+
+// add @import statements (which dont work with namespaces) in this file for things like fonts,etc.
+@import "cssimports.less";
+
+.bootdown {
+//@import "../../bootstrap/less/bootstrap.less";  //comment this line out
+@import "../../bootstrap/less/bootstrap-customize.less"; //add this line
+@import "variables.less";
+@import "bootswatch.less";
+@import "../../bootstrap/less/utilities.less";
+}

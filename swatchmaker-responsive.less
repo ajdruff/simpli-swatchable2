@@ -1,0 +1,14 @@
+
+//swatchmaker-responsive.less
+//this file is intended to be copied into the swatch directory and then compiled using lessc . See make-bootswatches.sh for more.
+
+
+// add @import statements (which dont work with namespaces) in this file for things like fonts,etc.
+@import "cssimports.less";
+
+.bootdown {
+@import "../../bootstrap/less/responsive.less";
+@import "variables.less";
+@import "bootswatch.less";
+@import "../../bootstrap/less/utilities.less";
+}
