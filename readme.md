@@ -1,14 +1,40 @@
-#About SimpliWP-Bootswatch
-Allows you to customize a build of bootstrap 2+ to output a customized version of bootstrap.css that enables you to easily add a namespace. A fork of [bootswatch](https://github.com/thomaspark/bootswatch/).
-
-##Bootstrap 3.0
-
-Bootstrap 3.0 themes created from the Bootstrap project use grunt to build themes, so is incompatible with this project.
-
-For more information on building Bootstrap 3.0 themes, see [http://bootswatch.com/help/](http://bootswatch.com/help/)
+#About Simpli-Swatchable2
+Allows you to customize a build of bootstrap 2+ to output a customized version of bootstrap.css that enables you to easily add a namespace or make other changes. A fork of [bootswatch](https://github.com/thomaspark/bootswatch/).
 
 
-#Installation Requirements
+
+##Why Use Simpli-Swatchable2 ?
+
+Simpli-Swatchable2 gives you two advantages:
+
+1. **Prevents Bootstrap styling from being corrupted by conflicting stylesheets**.   
+    
+    It does this by requiring you to apply a class to the element in which you place your Bootstrap 2.0 markup. 
+
+2. **Allows you to easily do a bulk rebuild of the Bootswatch swatches**
+
+    Run one command `make swatches` and rebuild all the swatches with a new namespace or whatever other edits you made in their less files.
+
+
+###Getting Started
+
+
+Simpli-Swatchable2 swatches can be used without any further modification. Simply download the swatches, and add them like you would any Twitter Bootstrap 2.0 css and javascript file.
+
+Download [Simpli-Swatchable2 swatches]() here. The default namespace is 'bootstrap'. 
+
+
+
+When you wish to apply the bootstrap classes, you need to surround your markup with a `.bootstrap` class: 
+
+
+        <div class="bootstrap">
+        bootstrap markup here
+        </div>
+
+
+
+#Swatch Building Requirements
 
 To compile swatches from less files to css files, you'll need to install node.js and a less compiler.
 
@@ -21,18 +47,23 @@ To compile swatches from less files to css files, you'll need to install node.js
 
 
 
-##Getting Started
 
-###Download Bootswatch Swatches
+###Updating Bootswatch Swatches
 1. Download the latest version of swatches from here: [https://github.com/thomaspark/bootswatch/archive/gh-pages.zip](https://github.com/thomaspark/bootswatch/archive/gh-pages.zip)
-2. unzip, and copy the swatches to the folder called 'swatches'
+2. unzip, and copy the entire contents of the `'2'` directory to the `swatches` directory.
 3. to create a custom swatch, duplicate one of the existing swatches and use it as a starting point
+4. Edit the make-bootswatches.sh script to include all swatches
 
-###Download Bootstrap
+Edit the following line in `make-bootswatches.sh` to add the swatches you want to build
+
+    swatches=( amelia cerulean cosmo cyborg default flatly journal readable simplex slate spacelab spruce superhero united )
+
+
+
+###Updating Bootstrap 2+ (does not support updating to Bootstrap 3.0)
 4. Download the version of bootstrap that matches the swatches from here : [https://github.com/twbs/bootstrap/releases](https://github.com/twbs/bootstrap/releases)
 5. rename its bootstrap directory to just 'bootstrap' and replace the existing swatchmaker/bootstrap directory
-6. 'make' bootstrap by opening a command line , changing to the swatchmaker/bootstrap directory and running make
-7.  now if you just want to add a namespace, edit swatchmaker.less and swatchmaker-responsive.less to edit the namespace.
+6. 'make' bootstrap by opening a command line , changing to the swatchmaker/bootstrap directory and running `make`
 8.  create the swatches  by opening a command line and changing to the swatchmaker directory and running `make swatches`
 
         cd swatchmaker
@@ -122,6 +153,13 @@ Below is a brief guide of the important files in bootswatch that allows you to m
 
 
 
+
+
+##Bootstrap 3.0
+
+Bootstrap 3.0 themes created from the Bootstrap project use grunt to build themes, so is incompatible with this project.
+
+For more information on building Bootstrap 3.0 themes, see [http://bootswatch.com/help/](http://bootswatch.com/help/)
 
 
 

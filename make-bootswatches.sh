@@ -6,7 +6,6 @@
 #
 
 swatches=( amelia cerulean cosmo cyborg default flatly journal readable simplex slate spacelab spruce superhero united )
-swatches=( amelia )
 
 
 
@@ -19,10 +18,17 @@ do
 cp swatchmaker.less "${INPUT}"/"${swatch}"/swatchmaker.less
 cp swatchmaker-responsive.less "${INPUT}"/"${swatch}"/swatchmaker-responsive.less
 
-## create a cssimports.less empty file if one doesn't already exist so our swatchmaker files don't choke.
-if [ ! -f "${INPUT}"/"${swatch}"/cssimports.less ]; then
-    touch "${INPUT}"/"${swatch}"/cssimports.less
+## Create dummmy missing files . Add these if the swatch source directory doesnt have them
+## so the @import statements dont choke and prevent compile
+MISSING_SWATCH_FILES=( cssimports.less bootswatch.less )
+for MISSING_SWATCH_FILE in "${MISSING_SWATCH_FILES[@]}"
+do
+
+if [ ! -f "${INPUT}"/"${swatch}"/"${MISSING_SWATCH_FILE}" ]; then
+touch "${INPUT}"/"${swatch}"/"${MISSING_SWATCH_FILE}"
 fi
+done
+
 
 ## compile the css into output directories
 
