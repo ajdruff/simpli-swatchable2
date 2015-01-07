@@ -288,11 +288,12 @@ Now when you run `make swatches` , you'll see a config.json file within each of 
 ###Updating swatches:   
 
 1. commit any outstanding changes in the master branch
-2. create a new branch ,e.g.: `Boostrap-Swatches-2.3.2`
+2. create a new branch ,e.g.: `branch-bootstrap-swatches-2.3.2`
 3. switch to the new branch
-2. rebuild the swatches
+2. rebuild the swatches if necessary
 3. delete everything in the branch except the `swatches-compiled` directory
 4. commit the branch
+5. create a tag `bootstrap-swatches-2.3.2`
 5. switch to master
 5. create a tag of the branch
 6. delete the branch
