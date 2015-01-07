@@ -23,7 +23,11 @@ Simpli-Swatchable2 gives you two advantages:
 
 1. Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/bootstrap-swatches-2.3.2.zip) and add them to your site.
 
+<<<<<<< HEAD
 2. Add resource links to your site's head section that point to the swatch style sheets and scripts: 
+=======
+2. Add the swatches to your site and add resource links to your site's head section: 
+>>>>>>> 4a8ca8d68344ada0bb98b8b1ae5f251cd38a623f
 
         <link href="/assets/swatches/amelia/bootstrap.min.css" rel="stylesheet">
         <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
