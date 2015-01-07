@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
 .bootstrap {
   /*!
  * Bootstrap v2.3.2
@@ -11,7 +12,6 @@
   /* Allow for input prepend/append in search forms */
   /* White icons with optional class, or on hover/focus/active states of certain elements */
   /* move down carets for tabs */
-  @import url(//fonts.googleapis.com/css?family=Ubuntu);
 }
 .bootstrap .clearfix {
   *zoom: 1;
