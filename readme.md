@@ -32,7 +32,7 @@ This assumes you have an 'assets' directory within the root of your directory ho
     assets/swatches/cosmo/bootstrap.min.css
 
 
-Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/Bootswatches2.3.2-Namespaced.zip) here. The default namespace is 'bootstrap'. 
+Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/bootstrap-swatches-2.3.2.zip). The default namespace is 'bootstrap'. 
 
 
 
@@ -297,7 +297,7 @@ Now when you run `make swatches` , you'll see a config.json file within each of 
 5. switch to master
 5. create a tag of the branch
 6. delete the branch
-7. push to remote
+7. push to remote , including tags
 8. update the readme with the new link
 
 
