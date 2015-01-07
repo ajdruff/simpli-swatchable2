@@ -62,8 +62,8 @@ Creating Swatches from existing Bootswatches involves:
 3. Build the Swatches
 
 ###Update the Bootswatch Swatches Directory
-1. Download the latest [Bootswatch swatches for Bootstrap 2.0]([https://github.com/thomaspark/bootswatch/archive/gh-pages.zip](https://github.com/thomaspark/bootswatch/archive/gh-pages.zip))
-2. unzip, and copy the entire contents of the `'2'` directory to the `swatches` directory.
+1.  [Download ](https://github.com/thomaspark/bootswatch/archive/gh-pages.zip) the latest Bootswatch swatches for Bootstrap 2.0
+2. Unzip, and copy the entire contents of the `'2'` directory to the `swatches` directory.
 4. Edit the `make-bootswatches.sh` script to include all swatch directory names
 
         swatches=( amelia cerulean cosmo cyborg default flatly journal readable simplex slate spacelab spruce superhero united )
