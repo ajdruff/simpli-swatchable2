@@ -13,38 +13,33 @@ Simpli-Swatchable2 gives you two advantages:
 
 2. **Allows you to easily do a bulk rebuild of the Bootswatch swatches**
 
-    Run one command `make swatches` and rebuild all the swatches with a new namespace or whatever other edits you made in their less files.
+    Run one command, `make swatches`, and rebuild all the swatches with a new namespace or whatever other edits you made in their less files.
 
 
 
 
 ####Quickstart - Using the Namspaced Bootstrap 2.0 Swatches
-Simpli-Swatchable2 swatches can be used without any further modification. Simply download the swatches, and add them like you would any Twitter Bootstrap 2.0 css and javascript file.
-
-    <link href="/assets/swatches/amelia/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
-
-This assumes you have an 'assets' directory within the root of your directory holding your swatches:
-
-    assets/js/bootstrap.min.js  
-    assets/swatches/amelia/bootstrap.min.css  
-    assets/swatches/cerulean/bootstrap.min.css
-    assets/swatches/cosmo/bootstrap.min.css
 
 
-Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/bootstrap-swatches-2.3.2.zip). The default namespace is 'bootstrap'. 
+1. Download [Simpli-Swatchable2 swatches](https://github.com/simpliwp/simpli-swatchable2/archive/bootstrap-swatches-2.3.2.zip) and add them to your site.
+
+2. Add the swatches to your site and add resource links to your site's head section: 
+
+        <link href="/assets/swatches/amelia/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 
 
 
-When you wish to apply the bootstrap classes, you need to surround your markup with a `.bootstrap` class: 
-
+3. Add your Bootstrap Markup surrounded by a div with class 'bootstrap' :
 
         <div class="bootstrap">
         bootstrap markup here
         </div>
 
 
-If you have problems with the markup being applied, add a 'bootstrap' class to the `<html> tag of your site. If you do not want to use namespaces, rebuild the swatches after removing the namespace in the `swatchmaker.less` and `swatchmaker-response.less` files. See the section discussing the `swatchmaker/swatchmaker.less` file for more information.
+>See the **Troubleshooting** section if you have any problems with styles or fonts not working correctly.
+
+
 
 ###Swatch Building Requirements
 
@@ -295,10 +290,15 @@ Now when you run `make swatches` , you'll see a config.json file within each of 
 4. commit the branch
 5. create a tag `bootstrap-swatches-2.3.2`
 5. switch to master
-5. create a tag of the branch
 6. delete the branch
 7. push to remote , including tags
 8. update the readme with the new link
+9. if necessary, delete any old remote tags using:  
+
+        git tag -d tag-name
+        git push origin :refs/tags/tag-name
+
+>tortoisegit does not support remote tag deletion - you need to do it from the command line
 
 
 ###Problems Compiling
