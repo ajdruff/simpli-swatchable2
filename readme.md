@@ -270,11 +270,26 @@ Bootstrap 3.0 themes created from the Bootstrap project use grunt to build theme
 For more information on building Bootstrap 3.0 themes, see [http://bootswatch.com/help/](http://bootswatch.com/help/)
 
 
+
+##Downcast Rebuilds
+
+Simpli-Swatchable2 can create config.json files for swatches, which can then be used as downcast skins.
+
+To use this feature, edit make-bootswatch.sh and set DOWNCAST=true:
+ 
+    DOWNCAST=true;
+
+Now when you run `make swatches` , you'll see a config.json file within each of the swatches that are pathed correctly for inclusion into downcast. You'll also see a file `downcast-skins.config` that includes statements that you can copy and paste into downcast's site's config.json file under the `skins` section.
+
+
+
 ##Repo Maintenance
 
 ###Updating swatches:   
 
-1. create a new branch ,e.g.: `Boostrap-Swatches-2.3.2`
+1. commit any outstanding changes in the master branch
+2. create a new branch ,e.g.: `Boostrap-Swatches-2.3.2`
+3. switch to the new branch
 2. rebuild the swatches
 3. delete everything in the branch except the `swatches-compiled` directory
 4. commit the branch
